@@ -6,6 +6,13 @@ This project implements a complete **Lakehouse architecture** to process maritim
 
 The pipeline ingests raw AIS data and processes it through a multi-stage ETL workflow, structured in a **bronze-silver-gold** pattern. Each stage is executed as a **Spark job** deployed in **Kubernetes cluster mode** for scalability and resilience. The jobs are orchestrated using **Apache Airflow**, which ensures reliable and scheduled execution.
 
+
+
+## Architecture
+
+![Architecture Diagram](docs/architecture.png)
+
+
 ## Key Features
 
 - **Lakehouse architecture**: Combines the scalability of data lakes with the data reliability of data warehouses.
