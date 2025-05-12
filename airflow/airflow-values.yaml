@@ -1,0 +1,15 @@
+executor: KubernetesExecutor
+
+config:
+  AIRFLOW__CORE__FERNET_KEY:
+    value: "3pxxBQdGAgG+GvdEYlhivYpzT+wRlqVccdxEA6cPFS0="
+  AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION:
+    value: "False"
+  AIRFLOW__WEBSERVER__EXPOSE_CONFIG:
+    value: "True"
+
+users:
+  - username: airflow
+    password: airflow
+    role: Admin
+    email: airflow@example.com
