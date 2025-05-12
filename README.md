@@ -50,3 +50,23 @@ To run this project:
    - **Apache Airflow** (via Helm) for orchestration.
    - **Spark** with Kubernetes integration for ETL execution.
 3. Deploy your Spark jobs and DAGs to the appropriate directories.
+
+
+## Limitations & Future Improvements
+While the current implementation of the Spark Lakehouse pipeline is functional and modular, several areas can be improved to increase robustness, scalability, and security:
+
+**Security Hardening** : 
+- Secure data communication between layers (e.g., encryption in transit between Bronze, Silver, and Gold).
+
+- Use role-based access control (RBAC) and network policies to restrict access to critical components (MinIO, Spark, Airflow).
+
+- Store secrets using a secure secrets manager instead of hardcoded values or environment variables.
+
+**CI/CD Integration** :
+
+- Automate DAG deployment and Spark image builds using GitHub Actions or other CI/CD tools.
+
+**Scalability** :
+
+- Consider deploying on a cloud-managed Kubernetes service with autoscaling and external storage (e.g., AWS EKS + S3).
+
